@@ -7,9 +7,12 @@ FROM ubuntu:latest
 WORKDIR /dir-to-b2
 
 # Install cron and AWS CLI
-RUN apt-get update \
-    && apt-get install -y cron python3-pip python3-dev build-essential \
-    && pip install b2
+RUN apt-get update
+RUN apt-get install -y cron 
+RUN apt-get install -y python3-pip
+RUN apt-get install -y python3-dev 
+RUN apt-get install -y build-essential
+RUN pip install b2
 
 # Add files
 COPY crontab .
