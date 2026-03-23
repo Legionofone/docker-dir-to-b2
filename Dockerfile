@@ -8,7 +8,7 @@ WORKDIR /dir-to-b2
 
 # Install cron and AWS CLI
 RUN apt-get update \
-    && apt-get install -y cron build-essential \
+    && apt-get install -y cron python3-pip python3-dev build-essential \
     && pip install b2
 
 # Add files
