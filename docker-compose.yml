@@ -1,0 +1,11 @@
+name: dockerdirtob2
+services:
+    dir-to-s3:
+        environment:
+            - BB_BUCKET=my-container
+            - BB_ACCESS_KEY_ID=MYACCESSKEYID
+            - BB_SECRET_ACCESS_KEY=3jk2kj3lkll+EXAMPLE/k213jl12k3kj213lkj213ll
+            - BB_DEFAULT_REGION=ca-central-1
+        volumes:
+            - /my_local_dir/:/upload/:ro
+        image: twostoryrobot/dir-to-s3

@@ -11,7 +11,7 @@ fi
 source /root/.envs
 if test "$(ls -A "/upload")"; then
     tar -zcf $TMPDIR/$(date '+%Y-%m-%dT%H:%M:%S').tar.gz /upload
-    aws s3 cp $TMPDIR/*.tar.gz s3://$AWS_BUCKET/
+    b2 file file upload $TMPDIR/*.tar.gz s3://$BB_BUCKET/
     rm $TMPDIR/*.tar.gz
 else
     echo The upload directory is empty, nothing to do

@@ -4,13 +4,12 @@
 #
 
 FROM ubuntu:latest
-MAINTAINER Chris Foster chris.james.foster@gmail.com
 WORKDIR /dir-to-s3
 
 # Install cron and AWS CLI
 RUN apt-get update \
     && apt-get install -y cron python-pip python-dev build-essential \
-    && pip install awscli==1.11.35
+    && pip install b2
 
 # Add files
 COPY crontab .
