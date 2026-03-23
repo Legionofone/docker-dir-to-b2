@@ -1,4 +1,4 @@
-gh workflow run ci.yml# docker-dir-to-B2
+# docker-dir-to-B2
 
 Docker container that performs daily backups from a local directory to b2
 
