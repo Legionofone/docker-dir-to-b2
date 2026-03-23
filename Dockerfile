@@ -12,7 +12,7 @@ RUN apt-get install -y cron
 RUN apt-get install -y python3-pip
 RUN apt-get install -y python3-dev 
 RUN apt-get install -y build-essential
-RUN pip install b2
+RUN pip install --break-system-packages b2
 
 # Add files
 COPY crontab .
