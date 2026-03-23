@@ -9,9 +9,8 @@ Basic usage is as follows:
 ```
 docker run \
   -e "BB_BUCKET=my-container" \
-  -e "BB_ACCESS_KEY_ID=MYACCESSKEYID" \
-  -e "BB_SECRET_ACCESS_KEY=3jk2kj3lkll+EXAMPLE/k213jl12k3kj213lkj213ll" \
-  -e "BB_DEFAULT_REGION=ca-central-1" \
+  -e "B2_APPLICATION_KEY_ID=MYACCESSKEYID" \
+  -e "B2_APPLICATION_KEY=3jk2kj3lkll+EXAMPLE/k213jl12k3kj213lkj213ll" \
   -v /my_local_dir/:/upload/:ro
   twostoryrobot/dir-to-b2
 ```
