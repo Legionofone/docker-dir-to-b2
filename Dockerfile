@@ -4,7 +4,7 @@
 #
 
 FROM ubuntu:latest
-WORKDIR /dir-to-s3
+WORKDIR /dir-to-b2
 
 # Install cron and AWS CLI
 RUN apt-get update \
@@ -22,4 +22,4 @@ RUN crontab ./crontab
 # Create the upload directory
 RUN mkdir -p /upload
 
-CMD [ "/dir-to-s3/start" ]
+CMD [ "/dir-to-b2/start" ]
