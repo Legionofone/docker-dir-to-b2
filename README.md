@@ -31,33 +31,10 @@ backup will be very large and needs to be stored on a network volume.
 
 # Security Best Practices
 
-To perform the backup, only one permission is needed: `b2:PutObject`. You should
-create a separate Managed Policy which can be assigned to a user with this 
-permission. Additionally, you should limit the permission to only the bucket
-you plan to upload to. Your policy will look something similar to this:
-
-```
-{
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "Stmt1291030123918",
-            "Effect": "Allow",
-            "Action": [
-                "b2:PutObject"
-            ],
-            "Resource": [
-                "arn:BB:b2:::my-container/*"
-            ]
-        }
-    ]
-}
-```
-
 You should create a separate user in your BB IAM console to perform the 
 backups. This user does not need a password, so they should only have the 
-'Programmatic access' Access Type. BB will provide a `BB_ACCESS_KEY_ID` and
-`BB_SECRET_ACCESS_KEY` for that user. Assign the Managed Policy that you 
+'Programmatic access' Access Type. BB will provide a `B2_APPLICATION_KEY_ID` and
+`B2_APPLICATION_KEY` for that user. Assign the Managed Policy that you 
 created to this user, and provide no other permissions to it.
 
 In the event that your container or host system is compromised, an attacker will
