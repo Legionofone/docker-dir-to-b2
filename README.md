@@ -11,8 +11,9 @@ docker run \
   -e "BB_BUCKET=my-container" \
   -e "B2_APPLICATION_KEY_ID=MYACCESSKEYID" \
   -e "B2_APPLICATION_KEY=3jk2kj3lkll+EXAMPLE/k213jl12k3kj213lkj213ll" \
+  -e "B2_BACKUP_NAME"=my-file-name
   -v /my_local_dir/:/upload/:ro
-  twostoryrobot/dir-to-b2
+  image: ghcr.io/legionofone/docker-dir-to-b2:Master
 ```
 
 This will start cron in the background which will run an upload script daily.
