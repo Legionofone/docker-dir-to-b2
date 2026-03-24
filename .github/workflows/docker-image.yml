@@ -8,6 +8,8 @@ on:
       - '**/README.md'
       - '**/.github/**'
       - '**/markdown/**'
+      - '**/docker-compose.yml'
+      - '**/LICENSE.txt'
 
 env:
   REGISTRY: ghcr.io
