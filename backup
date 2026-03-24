@@ -11,7 +11,7 @@ fi
 source /root/.envs
 if test "$(ls -A "/upload")"; then
     tar -zcf $TMPDIR/$(date '+%Y-%m-%dT%H:%M:%S').tar.gz /upload
-    b2 file upload $BB_BUCKET $TMPDIR/*.tar.gz $BACKUP_NAME.tar.gz
+    b2 file upload $B2_BUCKET $TMPDIR/*.tar.gz $B2_BACKUP_NAME.tar.gz
     rm $TMPDIR/*.tar.gz
 else
     echo The upload directory is empty, nothing to do
