@@ -8,10 +8,6 @@ if [ -z "$B2_ACCESS_KEY_ID" ]; then
   echo "WARN: B2_ACCESS_KEY_ID is unset";
 fi
 
-if [ -z "$B2_DEFAULT_REGION" ]; then
-  echo "WARN: B2_DEFAULT_REGION is unset";
-fi
-
 if [ -z "$B2_SECRET_ACCESS_KEY" ]; then 
   echo "WARN: B2_SECRET_ACCESS_KEY is unset";
 fi
