@@ -1,19 +1,19 @@
 #!/bin/bash
 
-if [ -z "$BB_BUCKET" ]; then
-  echo "WARN: BB_BUCKET is unset";
+if [ -z "$B2_BUCKET" ]; then
+  echo "WARN: B2_BUCKET is unset";
 fi
 
-if [ -z "$BB_ACCESS_KEY_ID" ]; then
-  echo "WARN: BB_ACCESS_KEY_ID is unset";
+if [ -z "$B2_ACCESS_KEY_ID" ]; then
+  echo "WARN: B2_ACCESS_KEY_ID is unset";
 fi
 
-if [ -z "$BB_DEFAULT_REGION" ]; then
-  echo "WARN: BB_DEFAULT_REGION is unset";
+if [ -z "$B2_DEFAULT_REGION" ]; then
+  echo "WARN: B2_DEFAULT_REGION is unset";
 fi
 
-if [ -z "$BB_SECRET_ACCESS_KEY" ]; then 
-  echo "WARN: BB_SECRET_ACCESS_KEY is unset";
+if [ -z "$B2_SECRET_ACCESS_KEY" ]; then 
+  echo "WARN: B2_SECRET_ACCESS_KEY is unset";
 fi
 
 # Provide environment variables for the cron script
