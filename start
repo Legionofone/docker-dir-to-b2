@@ -4,12 +4,16 @@ if [ -z "$B2_BUCKET" ]; then
   echo "WARN: B2_BUCKET is unset";
 fi
 
-if [ -z "$B2_ACCESS_KEY_ID" ]; then
+if [ -z "$B2_APPLICATION_KEY_ID" ]; then
   echo "WARN: B2_ACCESS_KEY_ID is unset";
 fi
 
-if [ -z "$B2_SECRET_ACCESS_KEY" ]; then 
+if [ -z "$B2_APPLICATION_KEY" ]; then 
   echo "WARN: B2_SECRET_ACCESS_KEY is unset";
+fi
+
+if [ -z "$B2_BACKUP_NAME" ]; then 
+  echo "WARN: B2_BACKUP_NAME is unset";
 fi
 
 # Provide environment variables for the cron script
